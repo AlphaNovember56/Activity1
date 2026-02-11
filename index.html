@@ -1,15 +1,47 @@
 <DOCTYPE! HTML>
+<html>
+  <body>
+
 
 <h2 style="color:red">Hello World</h2>
 
 <p style="color:orange">this website is a website</p>
 
+
+<div>
+  
+    <button id="reveal">Buttons</button>
+    <div id="answer" style="display:none">You clicked the button!</div>
+
+</div>
 <script>
-    function clicked () {
-          document.getElementById("message").innerText = "You clicked the button!";
-        }
+    const btn = document.getElementById('reveal');
+    const ans = document.getElementById('answer');
+    btn.addEventListener('click', () => {
+      ans.style.display = ans.style.display === 'none' ? 'block' : 'none';
+    });
 </script>
+</body>
+</html>
 
-<button id="message" onclick={clicked}>Button</button>
+<!-- 
+<!doctype html>
+<html>
+<head>
+  <title>Reveal Answer</title>
+</head>
+<body>
+  <div>
+    <button id="revealBtn">Reveal Answer</button>
+    <div id="answer" style="display:none">42</div>
+  </div>
 
-</DOCTYPE>
+  <script>
+    const btn = document.getElementById('revealBtn');
+    const ans = document.getElementById('answer');
+    btn.addEventListener('click', () => {
+      ans.style.display = ans.style.display === 'none' ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html> -->
